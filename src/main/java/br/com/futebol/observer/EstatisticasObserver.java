@@ -13,9 +13,12 @@ public class EstatisticasObserver implements EventoPartidaObserver {
     private final Map<String, Integer> cartõesAmarelos = new HashMap<>();
     private final Map<String, Integer> cartõesVermelhos = new HashMap<>();
 
+    private final java.util.Set<String> times = new java.util.LinkedHashSet<>();
+
     @Override
     public void onEvento(EventoPartida evento) {
         String time = evento.getTimeResponsavel();
+        times.add(time);
 
         switch (evento.getTipo()) {
             case GOL -> gols.merge(time, 1, Integer::sum);
@@ -31,8 +34,8 @@ public class EstatisticasObserver implements EventoPartidaObserver {
         System.out.println("\nESTATÍSTICAS DA PARTIDA \n");
         System.out.printf("%-22s %-6s%n", "Times", "Resultados", "\n");
 
-        for (String time : gols.keySet()) {
-            System.out.printf("%-22s %d gols, %d faltas, %d c. amar., %d c. verm. %n",
+        for (String time : times) {
+            System.out.printf("%-22s %d gols, %d faltas, %d ▓, %d ░ %n",
                     time,
                     gols.getOrDefault(time, 0),
                     faltas.getOrDefault(time, 0),

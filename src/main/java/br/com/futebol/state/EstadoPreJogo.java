@@ -8,6 +8,9 @@ public class EstadoPreJogo implements EstadoPartida {
 
     @Override
     public void simular(Partida partida) {
+
+
+
         System.out.println("PRÉ-JOGO");
         System.out.printf("  %s  X  %s%n",
                 partida.getTimeCasa().getNome(),

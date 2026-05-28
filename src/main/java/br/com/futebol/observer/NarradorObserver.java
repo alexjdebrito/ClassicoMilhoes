@@ -24,8 +24,8 @@ public class NarradorObserver implements EventoPartidaObserver {
             case INTERVALO        -> "🔔 Fim do primeiro tempo! As equipes vão para o intervalo.";
             case GOL              -> String.format("⚽⚽ GOOOOOL! [%d'] %s marca para o %s!", minuto, jogador, time);
             case FALTA -> null;
-            case CARTAO_AMARELO   -> String.format("[%d'] %s do %s recebe cartão amarelo!", minuto, jogador, time);
-            case CARTAO_VERMELHO  -> String.format("[%d'] %s do %s é EXPULSO!", minuto, jogador, time);
+            case CARTAO_AMARELO   -> String.format("[%d'] ▓ %s do %s recebe cartão amarelo!", minuto, jogador, time);
+            case CARTAO_VERMELHO  -> String.format("[%d'] ░ %s do %s é EXPULSO!", minuto, jogador, time);
             case FIM_PARTIDA      -> "🏁 FIM DE JOGO! A partida está encerrada!";
             case DEFESA_GOLEIRO   -> String.format("🧤 [%d'] Grande defesa de %s!", minuto, jogador);
         };

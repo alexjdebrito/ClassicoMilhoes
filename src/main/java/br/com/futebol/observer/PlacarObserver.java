@@ -3,12 +3,17 @@ package br.com.futebol.observer;
 import br.com.futebol.model.EventoPartida;
 import br.com.futebol.model.TipoEvento;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlacarObserver implements EventoPartidaObserver {
 
     private int golsTimeCasa = 0;
     private int golsTimeVisitante = 0;
-    private String nomeTimeCasa;
-    private String nomeTimeVisitante;
+    private final String nomeTimeCasa;
+    private final String nomeTimeVisitante;
+
+    private final List<String> artilheiros = new ArrayList<>();
 
     public PlacarObserver(String nomeTimeCasa, String nomeTimeVisitante) {
         this.nomeTimeCasa = nomeTimeCasa;
@@ -23,6 +28,7 @@ public class PlacarObserver implements EventoPartidaObserver {
             } else {
                 golsTimeVisitante++;
             }
+            artilheiros.add(String.format("%s %d'", evento.getJogador(), evento.getMinuto()));
             exibirPlacar(evento.getMinuto());
         }
     }
@@ -33,6 +39,10 @@ public class PlacarObserver implements EventoPartidaObserver {
     }
 
     public String getPlacarAtual() {
-        return String.format("%s %d x %d %s", nomeTimeCasa, golsTimeCasa, golsTimeVisitante, nomeTimeVisitante);
+        String placar = String.format("%s %d x %d %s", nomeTimeCasa, golsTimeCasa, golsTimeVisitante, nomeTimeVisitante);
+        if (artilheiros.isEmpty()) {
+            return placar;
+        }
+        return placar + "\n   ⚽ " + String.join(", ", artilheiros);
     }
 }
