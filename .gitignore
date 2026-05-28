@@ -1,0 +1,24 @@
+# IntelliJ IDEA
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries
+.idea/shelf
+*.iws
+
+# Maven
+target/
+out/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários gerados pelo build anterior
+sources.txt
