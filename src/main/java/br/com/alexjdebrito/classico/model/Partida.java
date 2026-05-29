@@ -24,7 +24,6 @@ public class Partida implements PartidaPublisher {
     }
 
     public void avancarFase() {
-        System.out.printf("%n %s%n", estadoAtual.getNomeEstado());
         estadoAtual.simular(this);
     }
 

@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class EstadoSegundoTempo implements EstadoPartida {
 
     private static final int INICIO_MINUTO   = 46;
-    private static final int FIM_MINUTO      = 91;
+    private static final int FIM_MINUTO      = 90;
     private static final int PASSO_SIMULACAO = 9;
 
     @Override

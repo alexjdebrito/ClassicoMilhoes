@@ -19,7 +19,7 @@ public class NarradorObserver implements EventoPartidaObserver {
 
         return switch (evento.getTipo()) {
             case INICIO_PARTIDA   -> "As equipes estão prontas para a partida!";
-            case INICIO_SEGUNDO_TEMPO -> "Começa o segundo tempo!";
+            case INICIO_SEGUNDO_TEMPO -> "Vai começar o segundo tempo!";
             case INTERVALO        -> "⌚ Fim do primeiro tempo! As equipes vão para o intervalo.";
             case GOL              -> String.format("⚽ GOOOOOL! [%d'] %s marca para o %s!", minuto, jogador, time);
             case GRANDE_CHANCE    -> String.format("💥 [%d'] Pelas barbas do Profeta! %s acerta a trave!", minuto, jogador);

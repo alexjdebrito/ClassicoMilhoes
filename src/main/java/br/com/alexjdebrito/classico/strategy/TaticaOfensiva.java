@@ -22,13 +22,13 @@ public class TaticaOfensiva implements TaticaStrategy {
         } else if (chance < 35) {
             return new EventoPartida(TipoEvento.DEFESA_GOLEIRO, adversario.getNome(),
                     adversario.getGoleiro(), minuto);
-        } else if (chance < 60) {
+        } else if (chance < 50) {
             return new EventoPartida(TipoEvento.FALTA, adversario.getNome(),
                     adversario.escolherJogadorAleatorio(), minuto);
-        } else if (chance < 70) {
+        } else if (chance < 60) {
             return new EventoPartida(TipoEvento.CARTAO_AMARELO, adversario.getNome(),
                     adversario.escolherJogadorAleatorio(), minuto);
-        } else if (chance < 80) {
+        } else if (chance < 63) {
             return new EventoPartida(TipoEvento.CARTAO_VERMELHO, adversario.getNome(),
                     adversario.escolherJogadorAleatorio(), minuto);
         }
