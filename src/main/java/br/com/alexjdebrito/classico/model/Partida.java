@@ -1,8 +1,9 @@
-package br.com.futebol.model;
+package br.com.alexjdebrito.classico.model;
 
-import br.com.futebol.observer.EventoPartidaObserver;
-import br.com.futebol.observer.PartidaPublisher;
-import br.com.futebol.state.EstadoPartida;
+import br.com.alexjdebrito.classico.observer.EventoPartidaObserver;
+import br.com.alexjdebrito.classico.observer.PartidaPublisher;
+import br.com.alexjdebrito.classico.state.EstadoEncerrado;
+import br.com.alexjdebrito.classico.state.EstadoPartida;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,7 @@ public class Partida implements PartidaPublisher {
     }
 
     public void simularPartidaCompleta() {
-        while (!(estadoAtual instanceof br.com.futebol.state.EstadoEncerrado)) {
+        while (!(estadoAtual instanceof EstadoEncerrado)) {
             avancarFase();
         }
     }

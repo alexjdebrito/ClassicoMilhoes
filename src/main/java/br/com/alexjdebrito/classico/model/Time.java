@@ -1,6 +1,6 @@
-package br.com.futebol.model;
+package br.com.alexjdebrito.classico.model;
 
-import br.com.futebol.strategy.TaticaStrategy;
+import br.com.alexjdebrito.classico.strategy.TaticaStrategy;
 
 import java.util.List;
 import java.util.Random;
@@ -25,8 +25,9 @@ public class Time {
         return jogadores.get(random.nextInt(jogadores.size()));
     }
 
-    public String getNome() { return nome; }
-    public String getGoleiro() { return goleiro; }
-    public TaticaStrategy getTatica() { return tatica; }
-    public void setTatica(TaticaStrategy tatica) { this.tatica = tatica; }
+    public String getNome()                       { return nome; }
+    public String getGoleiro()                    { return goleiro; }
+    public List<String> getJogadores()            { return jogadores; }
+    public TaticaStrategy getTatica()             { return tatica; }
+    public void setTatica(TaticaStrategy tatica)  { this.tatica = tatica; }
 }

@@ -1,9 +1,10 @@
-package br.com.futebol.model;
+package br.com.alexjdebrito.classico.model;
 
 public enum TipoEvento {
     INICIO_PARTIDA,
     INICIO_SEGUNDO_TEMPO,
     GOL,
+    GRANDE_CHANCE,
     FALTA,
     CARTAO_AMARELO,
     CARTAO_VERMELHO,

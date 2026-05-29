@@ -1,7 +1,6 @@
-package br.com.futebol.observer;
+package br.com.alexjdebrito.classico.observer;
 
-import br.com.futebol.model.EventoPartida;
-import br.com.futebol.model.TipoEvento;
+import br.com.alexjdebrito.classico.model.EventoPartida;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,17 +30,18 @@ public class EstatisticasObserver implements EventoPartidaObserver {
     }
 
     private void exibirResumo() {
-        System.out.println("\nESTATÍSTICAS DA PARTIDA \n");
+        System.out.println("\n─── ESTATÍSTICAS DA PARTIDA ─────");
+
         System.out.printf("%-22s %-6s%n", "Times", "Resultados", "\n");
 
         for (String time : times) {
-            System.out.printf("%-22s %d gols, %d faltas, %d ▓, %d ░ %n",
+            System.out.printf("%-22s %d gols, %d faltas, %d ⚠️, %d ❌ %n",
                     time,
                     gols.getOrDefault(time, 0),
                     faltas.getOrDefault(time, 0),
                     cartõesAmarelos.getOrDefault(time, 0),
                     cartõesVermelhos.getOrDefault(time, 0));
         }
-        System.out.println("|||\n");
+        System.out.println("─────────────────────────────────");
     }
 }

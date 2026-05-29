@@ -1,6 +1,6 @@
-package br.com.futebol.state;
+package br.com.alexjdebrito.classico.state;
 
-import br.com.futebol.model.Partida;
+import br.com.alexjdebrito.classico.model.Partida;
 
 public class EstadoEncerrado implements EstadoPartida {
 

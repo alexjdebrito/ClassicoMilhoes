@@ -1,6 +1,6 @@
-package br.com.futebol.observer;
+package br.com.alexjdebrito.classico.observer;
 
-import br.com.futebol.model.EventoPartida;
+import br.com.alexjdebrito.classico.model.EventoPartida;
 
 public interface PartidaPublisher {
     void registrarObservador(EventoPartidaObserver observer);

@@ -1,8 +1,8 @@
-package br.com.futebol.state;
+package br.com.alexjdebrito.classico.state;
 
-import br.com.futebol.model.EventoPartida;
-import br.com.futebol.model.Partida;
-import br.com.futebol.model.TipoEvento;
+import br.com.alexjdebrito.classico.model.EventoPartida;
+import br.com.alexjdebrito.classico.model.Partida;
+import br.com.alexjdebrito.classico.model.TipoEvento;
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class EstadoPrimeiroTempo implements EstadoPartida {
         System.out.println("\nPressione Enter para iniciar o 1º tempo...");
         new Scanner(System.in).nextLine();
 
-        System.out.println("\n--- 1º TEMPO ---");
+        System.out.println("\n─── 1º TEMPO ────────────────────");
 
         for (int minuto = PASSO_SIMULACAO; minuto <= DURACAO_MINUTOS; minuto += PASSO_SIMULACAO) {
             simularMinuto(partida, minuto);

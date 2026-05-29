@@ -1,4 +1,4 @@
-package br.com.futebol.model;
+package br.com.alexjdebrito.classico.model;
 
 public class EventoPartida {
 

@@ -1,12 +1,12 @@
-package br.com.futebol.state;
+package br.com.alexjdebrito.classico.state;
 
-import br.com.futebol.model.EventoPartida;
-import br.com.futebol.model.Partida;
-import br.com.futebol.model.TipoEvento;
-import br.com.futebol.strategy.TaticaContraAtaque;
-import br.com.futebol.strategy.TaticaDefensiva;
-import br.com.futebol.strategy.TaticaOfensiva;
-import br.com.futebol.strategy.TaticaStrategy;
+import br.com.alexjdebrito.classico.model.EventoPartida;
+import br.com.alexjdebrito.classico.model.Partida;
+import br.com.alexjdebrito.classico.model.TipoEvento;
+import br.com.alexjdebrito.classico.strategy.TaticaContraAtaque;
+import br.com.alexjdebrito.classico.strategy.TaticaDefensiva;
+import br.com.alexjdebrito.classico.strategy.TaticaOfensiva;
+import br.com.alexjdebrito.classico.strategy.TaticaStrategy;
 
 import java.util.Random;
 
@@ -16,7 +16,7 @@ public class EstadoIntervalo implements EstadoPartida {
 
     @Override
     public void simular(Partida partida) {
-        System.out.println("\n--- INTERVALO ---");
+        System.out.println("\n─── INTERVALO ───────────────────");
         System.out.println("Um grande primeiro tempo de jogo!");
         pausar(1000);
 
@@ -39,9 +39,9 @@ public class EstadoIntervalo implements EstadoPartida {
         TaticaStrategy novaTaticaCasa = taticas[random.nextInt(taticas.length)];
         TaticaStrategy novaTaticaVisitante = taticas[random.nextInt(taticas.length)];
 
-        System.out.printf("%s muda para tática: %s%n",
+        System.out.printf("\nO %s volta a campo com uma formação %s%n",
                 partida.getTimeCasa().getNome(), novaTaticaCasa.getNomeTatica());
-        System.out.printf("%s muda para tática: %s%n",
+        System.out.printf("E o %s volta a campo com uma formação %s%n\n",
                 partida.getTimeVisitante().getNome(), novaTaticaVisitante.getNomeTatica());
 
         partida.getTimeCasa().setTatica(novaTaticaCasa);

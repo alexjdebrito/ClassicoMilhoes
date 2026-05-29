@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.futebol</groupId>
-    <artifactId>futebol-simulator</artifactId>
+    <artifactId>futebol</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -20,7 +20,7 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mainClass>br.com.futebol.main.SimuladorFutebol</exec.mainClass>
+        <exec.mainClass>br.com.alexjdebrito.classico.main.SimuladorFutebol</exec.mainClass>
     </properties>
 
     <build>

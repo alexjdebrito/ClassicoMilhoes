@@ -1,8 +1,8 @@
-package br.com.futebol.strategy;
+package br.com.alexjdebrito.classico.strategy;
 
-import br.com.futebol.model.EventoPartida;
-import br.com.futebol.model.Time;
-import br.com.futebol.model.TipoEvento;
+import br.com.alexjdebrito.classico.model.EventoPartida;
+import br.com.alexjdebrito.classico.model.Time;
+import br.com.alexjdebrito.classico.model.TipoEvento;
 
 import java.util.Random;
 
@@ -17,6 +17,8 @@ public class TaticaOfensiva implements TaticaStrategy {
 
         if (chance < 15) {
             return new EventoPartida(TipoEvento.GOL, time.getNome(), jogador, minuto);
+        } else if (chance < 16) {
+            return new EventoPartida(TipoEvento.GRANDE_CHANCE, time.getNome(), jogador, minuto);
         } else if (chance < 35) {
             return new EventoPartida(TipoEvento.DEFESA_GOLEIRO, adversario.getNome(),
                     adversario.getGoleiro(), minuto);
@@ -25,6 +27,9 @@ public class TaticaOfensiva implements TaticaStrategy {
                     adversario.escolherJogadorAleatorio(), minuto);
         } else if (chance < 70) {
             return new EventoPartida(TipoEvento.CARTAO_AMARELO, adversario.getNome(),
+                    adversario.escolherJogadorAleatorio(), minuto);
+        } else if (chance < 80) {
+            return new EventoPartida(TipoEvento.CARTAO_VERMELHO, adversario.getNome(),
                     adversario.escolherJogadorAleatorio(), minuto);
         }
 

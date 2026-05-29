@@ -1,14 +1,13 @@
-package br.com.futebol.main;
+package br.com.alexjdebrito.classico.main;
 
-import br.com.futebol.model.Partida;
-import br.com.futebol.model.Time;
-import br.com.futebol.observer.EstatisticasObserver;
-import br.com.futebol.observer.NarradorObserver;
-import br.com.futebol.observer.PlacarObserver;
-import br.com.futebol.state.EstadoPreJogo;
-import br.com.futebol.strategy.TaticaContraAtaque;
-import br.com.futebol.strategy.TaticaDefensiva;
-import br.com.futebol.strategy.TaticaOfensiva;
+import br.com.alexjdebrito.classico.model.Partida;
+import br.com.alexjdebrito.classico.model.Time;
+import br.com.alexjdebrito.classico.observer.EstatisticasObserver;
+import br.com.alexjdebrito.classico.observer.NarradorObserver;
+import br.com.alexjdebrito.classico.observer.PlacarObserver;
+import br.com.alexjdebrito.classico.state.EstadoPreJogo;
+import br.com.alexjdebrito.classico.strategy.TaticaContraAtaque;
+import br.com.alexjdebrito.classico.strategy.TaticaOfensiva;
 
 import java.util.List;
 
@@ -44,7 +43,8 @@ public class SimuladorFutebol {
         partida.registrarObservador(new EstatisticasObserver());
 
         partida.simularPartidaCompleta();
+        System.out.println("\n─── RESULTADO FINAL ─────────────");
+        System.out.println("─── " + placar.getPlacarAtual());
 
-        System.out.println("\n🏆 Resultado final: " + placar.getPlacarAtual());
     }
 }

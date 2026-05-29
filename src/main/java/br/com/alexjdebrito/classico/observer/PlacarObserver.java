@@ -1,7 +1,7 @@
-package br.com.futebol.observer;
+package br.com.alexjdebrito.classico.observer;
 
-import br.com.futebol.model.EventoPartida;
-import br.com.futebol.model.TipoEvento;
+import br.com.alexjdebrito.classico.model.EventoPartida;
+import br.com.alexjdebrito.classico.model.TipoEvento;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +34,7 @@ public class PlacarObserver implements EventoPartidaObserver {
     }
 
     private void exibirPlacar(int minuto) {
-        System.out.printf("│  PLACAR [%d']  %-10s %d x %d %-10s │%n",
+        System.out.printf("├─── PLACAR [%d'] ───┤ %s %d x %d %s %n",
                 minuto, nomeTimeCasa, golsTimeCasa, golsTimeVisitante, nomeTimeVisitante);
     }
 
